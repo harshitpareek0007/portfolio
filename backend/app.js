@@ -10,6 +10,7 @@ const educationRoutes = require('./routes/educationRoutes');
 const certificationRoutes = require('./routes/certificationRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 const testimonialRoutes = require('./routes/testimonialRoutes');
+const messageRoutes = require('./routes/messageRoutes');
 const cookieParser = require('cookie-parser');
 
 const app = express();
@@ -33,6 +34,7 @@ app.use('/api/education', educationRoutes);
 app.use('/api/certifications', certificationRoutes);
 app.use('/api/blogs', blogRoutes);
 app.use('/api/testimonials', testimonialRoutes);
+app.use('/api/messages', messageRoutes);
 
 // Error Handling Middleware
 app.use(notFoundHandler);
