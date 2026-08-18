@@ -4,6 +4,7 @@ const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');
 const healthRoutes = require('./routes/healthRoutes');
 const authRoutes = require('./routes/authRoutes');
 const projectRoutes = require('./routes/projectRoutes');
+const experienceRoutes = require('./routes/experienceRoutes');
 const cookieParser = require('cookie-parser');
 
 const app = express();
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
+app.use('/api/experience', experienceRoutes);
 
 // Error Handling Middleware
 app.use(notFoundHandler);
