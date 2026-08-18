@@ -7,6 +7,7 @@ const projectRoutes = require('./routes/projectRoutes');
 const experienceRoutes = require('./routes/experienceRoutes');
 const skillRoutes = require('./routes/skillRoutes');
 const educationRoutes = require('./routes/educationRoutes');
+const certificationRoutes = require('./routes/certificationRoutes');
 const cookieParser = require('cookie-parser');
 
 const app = express();
@@ -27,6 +28,7 @@ app.use('/api/projects', projectRoutes);
 app.use('/api/experience', experienceRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/education', educationRoutes);
+app.use('/api/certifications', certificationRoutes);
 
 // Error Handling Middleware
 app.use(notFoundHandler);
